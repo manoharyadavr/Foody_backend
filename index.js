@@ -31,5 +31,8 @@ app.use("/home", (req, res) => {
 
 app.listen(PORT, () => {
     console.log(`The app running on ${PORT}`);    
+    if(err){
+        console.log(err)
+    }
 })
 
