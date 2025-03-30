@@ -25,10 +25,11 @@ app.use("/firm", firmRoutes)
 app.use("/product",productRoutes)
 app.use("/uploads",express.static("uploads"))
 
+app.use("/home", (req, res) => {
+    res.send("<h1>Welcome to Foody</h1>")
+})
+
 app.listen(PORT, () => {
     console.log(`The app running on ${PORT}`);    
 })
 
-app.use("/home", (req, res) => {
-    res.send("<h1>Welcome to Foody</h1>")
-})
