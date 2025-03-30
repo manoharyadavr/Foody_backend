@@ -11,7 +11,7 @@ const app = express()
 
 dotenv.config()
 
-const PORT = 4000
+const PORT = process.env.PORT || 4000
 
 mongoose.connect(process.env.MONGODB_URI)
 .then(() => console.log("MongoDB connected successfully!")) 
