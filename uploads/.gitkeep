@@ -1,0 +1,3 @@
+git add uploads/.gitkeep
+git commit -m "Keep uploads folder"
+git push origin main
