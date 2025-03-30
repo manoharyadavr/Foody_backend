@@ -52,7 +52,7 @@ const getProductByFirm = async(req, res) => {
 
         const restaurentName = firm.firmName
 
-        const products = await Product.find({firm: firmId})
+        const products = await Product.find({ firm: { $in: [firmId] } })
         res.status(200).json({restaurentName, products})
     } catch (error) {
         console.error(error)
