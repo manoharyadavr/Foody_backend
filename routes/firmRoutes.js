@@ -5,10 +5,10 @@ const verifyToken = require("../middlewares/verifyTokens")
 const router = express.Router()
 
 router.post("/addfirm", verifyToken, firmController.addFirm)
-router.get("/uploads:imageName", (req, res)=>{
+router.get("/uploads/:imageName", (req, res)=>{
     const imageName = req.params.imageName
 
-    req.headersSent("Content-Type", "image/jpg")
+    req.headersSent("Content-Type", "image/jpeg")
 
     res.sendFile(path.join(__dirname, "..", "uploads", imageName))
 })
